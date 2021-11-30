@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@100;200;300;400;500;700;900&family=Lato:wght@100;300;400;700;900&display=swap');
+
+
+
+html,
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: scroll;
+
+  --white: #ecf0f1;
+  --dark: #131c26;/* #2c3e50 */
+}
+* {
+    color: var(--white);
+    font-family: 'Exo';
+}
+
+nav {
+  position: fixed;
+  background-color: var(--dark);
+  width: 100vw;
+  height: 50px;
+}
+
+nav ul {
+  display: flex;
+  position: absolute;
+  right: 0;
+  width: 40%;
+  justify-content: space-around;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+a:visited{
+  color: var(--white);
+}
+
+#welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  background: linear-gradient(35deg, #0ccda3 0%, #c1fcd3 100%);
+  /*linear-gradient(38deg,#1abc9c 20%,#2980b9 100%); linear-gradient(35deg, #3a3d40 0%, #181719 100%); hsl(100, 90%, 15%) 0%, hsl(120, 90%, 70%) 100%*/
+}
+
+#welcome-section h1 {
+  font-size: 4rem;
+  margin-bottom: 0;
+}
+
+#welcome-section p {
+  color: var(--dark);/*#2c3e50;*/
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+#projects {
+  min-height: 100vh;
+  background: linear-gradient(35deg,#a96f44 0%, #f2ecb6 100%);/*#771d32 20%,#e65758 100%);*/
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+#projects-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 4rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+#projects-grid img {
+  display: block;
+  height: calc(100% - 1rem);
+  width: 100%;
+  object-fit: cover;
+}
+
+#projects-grid p {
+  background-color: var(--dark);
+  margin-top: 0;
+  padding: 15px;
+}
+
+#contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: calc(100vh - 50px);
+  background: linear-gradient(35deg,#07a3b2 0%,#d9ecc7 100%);
+}
+
+.contact-link {
+  text-align: center;
+  width: 100px;
+}
+
+.contact-link i {
+  font-size: 2.5rem;
+  color: var(--dark);
+}
+
+.contact-link p {
+  margin: 0;
+  margin-top: 10px;
+  color: var(--dark);
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--dark);
+  height: 50px;
+  margin: 0;
+  padding: 0 25px;
+  border: 0;
+}
+
+footer p {
+  align-self: center;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+@media screen and (max-width: 980px) {
+  nav ul {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  justify-content: space-around;
+  }
+
+  #contact {
+    flex-direction: column;
+  }
+
+}
